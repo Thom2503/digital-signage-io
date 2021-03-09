@@ -1,0 +1,114 @@
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+ position: relative;
+ width: 100%;
+}
+
+/* Make the image responsive */
+.container img {
+ width: 150%;
+ height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn_Littleroot {
+ position: absolute;
+ top: 68%;
+ left: 30%;
+ transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ background-color: #555;
+ color: white;
+ font-size: 16px;
+ padding: 12px 24px;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+.container .btn_Littleroot:hover {
+ background-color: black;
+ opacity: 0.5;
+}
+/* btn_Rustboro */
+.container .btn_Rustboro {
+ position: absolute;
+ top: 39%;
+ left: 13%;
+ transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ background-color: #555;
+ color: white;
+ font-size: 16px;
+ padding: 12px 24px;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+.container .btn_Rustboro:hover {
+ background-color: black;
+ opacity: 0.5;
+}
+/* btn_Dewford */
+.container .btn_Dewford {
+ position: absolute;
+ top: 85%;
+ left: 18%;
+ transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ background-color: #555;
+ color: white;
+ font-size: 16px;
+ padding: 12px 24px;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+.container .btn_Dewford:hover {
+ background-color: black;
+ opacity: 0.5;
+}
+
+/* btn_Mauwville */
+.container .btn_Mauwville {
+ position: absolute;
+ top: 33%;
+ left: 47%;
+ transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ background-color: #555;
+ color: white;
+ font-size: 16px;
+ padding: 12px 24px;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+.container .btn_Mauwville:hover {
+ background-color: black;
+ opacity: 0.5;
+}
+
+/* btn_Lavaridge */
+.container .btn_Lavaridge {
+ position: absolute;
+ top: 17%;
+ left: 35%;
+ transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ background-color: #555;
+ color: white;
+ font-size: 16px;
+ padding: 12px 24px;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+.container .btn_Lavaridge:hover {
+ background-color: black;
+ opacity: 0.5;
+}

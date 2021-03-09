@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Signage || Hoenn</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <script src="js/js.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <a href="#main-menu" class="menu-toggle">
+        <span class="fa fa-bars"></span>
+      </a>
+
+      <h1 class="logo">Hoenn</h1>
+
+      <nav id="main-menu" class="main-menu">
+        <a href="#main-menu-toggle" class="menu-close">
+          <span class="fa fa-close"></span>
+        </a>
+        <ul>
+          <li><a href="#">Over</a></li>
+        </ul>
+      </nav>
+      <a href="#main-menu-toggle" class="backdrop" hidden></a>
+    </header>
+    <div class="container">
+      <img src="img/Hoenn_ORAS_2x.png" alt="Here is an image of pelican town of Stardew Valley">
+      <button type="button" onclick="showmodal()"id="btn_Littleroot" class="btn_Littleroot" name="button"><i class="fa fa-home"></i></button>
+      <button type="button" id="btn_Rustboro" class="btn_Rustboro" name="button"><i class="fas fa-city"></i></button>
+      <button type="button" class="btn_Dewford" name="button"><i class='fas fa-water'></i></button>
+      <button type="button" class="btn_Mauwville" name="button"><i class='fas fas fa-broadcast-tower'></i></button>
+      <button type="button" class="btn_Lavaridge" name="button"><i class='fas fas fa-hot-tub'></i></button>
+
+    </div>
+    <div class='modal' id='modal1'>
+    	Hello world
+    </div>
+    <script>
+    function modal(id)
+    {
+      let el = document.getElementById(id);  // can also use a query selector
+      let body = document.querySelector("body");
+      let bg = document.createElement("div");
+      bg.className = "modal-js-overlay";
+
+      body.appendChild(bg);
+
+      let close = document.createElement("span");
+      close.className = "modal-js-close";
+      close.innerHTML = "x";
+      close.addEventListener('click', function () {
+          let overlay = body.querySelector(".modal-js-overlay");
+          let closebtn = parent.querySelector(".modal-js-close");
+
+          body.removeChild(overlay);
+
+          el.classList.remove('on');
+          el.removeChild(closebtn);
+      });
+    }
+    function modaloff(id)
+    {
+        let body = document.querySelector("body");
+        let el = document.querySelector(id);
+        let overlay = body.querySelector(".modal-js-overlay");
+
+        el.classList.remove('on');
+        body.removeChild(overlay);
+    }
+
+
+  	function showmodal()
+  	{
+  		modal('modal1'); // show
+  		modaloff('modal1'); // hide
+  	}
+
+  </script>
+  </body>
+</html>
