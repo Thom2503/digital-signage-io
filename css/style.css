@@ -133,3 +133,23 @@
  background-color: black;
  opacity: 0.5;
 }
+/* btn_Mossdeep */
+.container .btn_Mossdeep {
+ position: absolute;
+ top: 14%;
+ left: 129%;
+ transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ background-color: #555;
+ color: white;
+ font-size: 16px;
+ padding: 12px 24px;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+.container .btn_Mossdeep:hover {
+ background-color: black;
+ opacity: 0.5;
+}
