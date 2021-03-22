@@ -113,3 +113,23 @@
  background-color: black;
  opacity: 0.5;
 }
+/* btn_Fortree */
+.container .btn_Fortree {
+ position: absolute;
+ top: 7%;
+ left: 69%;
+ transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ background-color: #555;
+ color: white;
+ font-size: 16px;
+ padding: 12px 24px;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+.container .btn_Fortree:hover {
+ background-color: black;
+ opacity: 0.5;
+}

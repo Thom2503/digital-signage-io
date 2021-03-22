@@ -38,7 +38,9 @@
       <button type="button" id="btn_Rustboro" class="btn_Rustboro" data-toggle="modal" data-target="#Rustboro" name="button"><i class="fas fa-city"></i></button>
       <button type="button" id="btn_Dewford" class="btn_Dewford" data-toggle="modal" data-target="#Dewford" name="button"><i class='fas fa-water'></i></button>
       <button type="button" id="btn_Mauwville" class="btn_Mauwville" data-toggle="modal" data-target="#Mauwville" name="button"><i class='fas fas fa-broadcast-tower'></i></button>
-      <button type="button" class="btn_Lavaridge" data-toggle="modal" data-target="#Lavaridge" name="button"><i class='fas fas fa-hot-tub'></i></button>
+      <button type="button" id="btn_Lavaridge" class="btn_Lavaridge" data-toggle="modal" data-target="#Lavaridge" name="button"><i class='fas fas fa-hot-tub'></i></button>
+      <button type="button" id="btn_Fortree" class="btn_Fortree" data-toggle="modal" data-target="#Fortree" name="button"><i class='fas fas fa-tree'></i></button>
+
       <!-- Modal Littleroot-->
       <div class="modal fade" id="LittleRoot" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -107,7 +109,7 @@
               </button>
             </div>
             <div class="modal-body">
-              .<div id="image-mauwville"></div>
+              <div id="image-mauwville"></div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -120,13 +122,32 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <h5 class="modal-title" id="lavaridgeTitle"></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <div id="image-lavaridge"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Lavaridge-->
+      <div class="modal fade" id="Fortree" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="fortreeTitle"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="image-fortree"></div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -189,6 +210,26 @@
         var name = titleCase(obj.name);
         document.getElementById("mauwvilleTitle").innerHTML = name.replace('-', ' ');
         document.getElementById("image-mauwville").innerHTML = "<img style='width: 90%;position: relative;' src='https://cdn.bulbagarden.net/upload/d/d6/" + name.replace('-', '_') + "_RS.png' alt='"+titleCase(obj.name)+"'>"
+      });
+
+      P.resource(
+        "api/v2/location/lavaridge-town/"
+      ).then( response => {
+        console.log(response)
+        var obj = response;
+        var name = titleCase(obj.name);
+        document.getElementById("lavaridgeTitle").innerHTML = name.replace('-', ' ');
+        document.getElementById("image-lavaridge").innerHTML = "<img style='width: 90%;position: relative;' src='https://cdn.bulbagarden.net/upload/f/f7/" + name.replace('-', '_') + "_RS.png' alt='"+titleCase(obj.name)+"'>"
+      });
+
+      P.resource(
+        "api/v2/location/fortree-city/"
+      ).then( response => {
+        console.log(response)
+        var obj = response;
+        var name = titleCase(obj.name);
+        document.getElementById("fortreeTitle").innerHTML = name.replace('-', ' ');
+        document.getElementById("image-fortree").innerHTML = "<img style='width: 90%;position: relative;' src='https://cdn.bulbagarden.net/upload/7/7c/" + name.replace('-', '_') + "_RS.png' alt='"+titleCase(obj.name)+"'>"
       });
     </script>
   </body>
