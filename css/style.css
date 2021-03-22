@@ -173,3 +173,23 @@
  background-color: black;
  opacity: 0.5;
 }
+/* btn_EverGrande */
+.container .btn_EverGrande {
+ position: absolute;
+ top: 32%;
+ left: 138%;
+ transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ background-color: #555;
+ color: white;
+ font-size: 16px;
+ padding: 12px 24px;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+.container .btn_EverGrande:hover {
+ background-color: black;
+ opacity: 0.5;
+}

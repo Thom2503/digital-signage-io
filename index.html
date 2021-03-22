@@ -42,6 +42,7 @@
       <button type="button" id="btn_Fortree" class="btn_Fortree" data-toggle="modal" data-target="#Fortree" name="button"><i class='fas fas fa-tree'></i></button>
       <button type="button" id="btn_Mossdeep" class="btn_Mossdeep" data-toggle="modal" data-target="#Mossdeep" name="button"><i class='fas fas fa-space-shuttle'></i></button>
       <button type="button" id="btn_Sootopolis" class="btn_Sootopolis" data-toggle="modal" data-target="#Sootopolis" name="button"><i class='fas fas fa-mountain'></i></button>
+      <button type="button" id="btn_EverGrande" class="btn_EverGrande" data-toggle="modal" data-target="#EverGrande" name="button"><i class='fas fas fa-medal'></i></button>
 
       <!-- Modal Littleroot-->
       <div class="modal fade" id="LittleRoot" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -55,6 +56,8 @@
             </div>
             <div class="modal-body">
               <div id="image-littleroot"></div>
+              <h5>Japanse Naam:</h5>
+              <div id="littlerootOtherLang"></div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -74,6 +77,8 @@
             </div>
             <div class="modal-body">
               <div id="image-rustboro"></div>
+              <h5>Japanse Naam:</h5>
+              <div id="RustboroOtherLang"></div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -195,6 +200,27 @@
           </div>
         </div>
       </div>
+      <!-- Modal EverGrande-->
+      <div class="modal fade" id="EverGrande" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="evergrandeTitle"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="image-evergrande"></div>
+              <h5>Japanse Naam:</h5>
+              <div id="evergrandeOtherLang"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
       function capitalizeFirstLetter(string) {
@@ -218,6 +244,12 @@
         console.log(response)
         var obj = response;
         var name = titleCase(obj.name);
+        var japaneseName = obj.names;
+        for (let i = 0; i < japaneseName.length; i++) {
+          console.log(japaneseName[i].name)
+          document.getElementById("RustboroOtherLang").innerHTML = japaneseName[i].name;
+
+        }
         document.getElementById("RustboroTitle").innerHTML = name.replace('-', ' ');
         document.getElementById("image-rustboro").innerHTML = "<img style='width: 90%;position: relative;' src='https://cdn.bulbagarden.net/upload/7/72/" + name.replace('-', '_') + "_RS.png' alt='"+titleCase(obj.name)+"'>"
       });
@@ -228,6 +260,11 @@
         console.log(response)
         var obj = response;
         var name = titleCase(obj.name);
+        var japaneseName = obj.names;
+        for (let i = 0; i < japaneseName.length; i++) {
+          document.getElementById("littlerootOtherLang").innerHTML = japaneseName[i].name;
+
+        }
         document.getElementById("RustboroLittleroot").innerHTML = name.replace('-', ' ');
         document.getElementById("image-littleroot").innerHTML = "<img style='width: 90%;position: relative;' src='https://cdn.bulbagarden.net/upload/a/a3/" + name.replace('-', '_') + "_RS.png' alt='"+titleCase(obj.name)+"'>"
       });
@@ -290,6 +327,21 @@
         var name = titleCase(obj.name);
         document.getElementById("sootopolisTitle").innerHTML = name.replace('-', ' ');
         document.getElementById("image-sootopolis").innerHTML = "<img style='width: 90%;position: relative;' src='https://cdn.bulbagarden.net/upload/c/cf/" + name.replace('-', '_') + "_RS.png' alt='"+titleCase(obj.name)+"'>"
+      });
+
+      P.resource(
+        "api/v2/location/ever-grande-city/"
+      ).then( response => {
+        console.log(response)
+        var obj = response;
+        var name = titleCase(obj.name);
+        var japaneseName = obj.names;
+        for (let i = 0; i < japaneseName.length; i++) {
+          document.getElementById("evergrandeOtherLang").innerHTML = japaneseName[i].name;
+
+        }
+        document.getElementById("evergrandeTitle").innerHTML = name.replace('-', ' ');
+        document.getElementById("image-evergrande").innerHTML = "<img style='width: 90%;position: relative;' src='https://cdn.bulbagarden.net/upload/3/31/Ever_Grande_City_RS.png' alt='"+titleCase(obj.name)+"'>"
       });
     </script>
   </body>
