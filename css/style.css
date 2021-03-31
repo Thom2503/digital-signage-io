@@ -193,3 +193,16 @@
  background-color: black;
  opacity: 0.5;
 }
+
+/* cover photo voor de games */
+.container_about {
+    position: absolute;
+    margin: 0 auto;
+    top: 25%;
+    left: 25%;
+}
+.cover_photo {
+    width: 75%;
+    height: 75%;
+    position: relative;
+}
