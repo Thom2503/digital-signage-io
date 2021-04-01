@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Signage || Hoenn</title>
+  <script defer src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="css/hamburger.css">
+  <link rel="stylesheet" href="css/all_pokemon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#main-menu" class="menu-toggle">
+      <span class="fa fa-bars"></span>
+    </a>
+
+    <h1 class="logo">Hoenn</h1>
+
+    <nav id="main-menu" class="main-menu">
+      <a href="#main-menu-toggle" class="menu-close">
+        <span class="fa fa-close"></span>
+      </a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Over</a></li>
+        <li><a href="all_pokemon.html">Hoenn Pokedex</a></li>
+        <li><a href="https://pokemonshowdown.com/">Pokemon Showdown</a></li>
+        <li><a href="https://nl.wikipedia.org/wiki/Pok%C3%A9mon_Ruby_en_Sapphire">Wikipedia - Pokemon Ruby and Sapphire</a></li>
+        <li><a href="https://bulbapedia.bulbagarden.net/wiki/Main_Page">Bulbapedia</a></li>
+        <li><a href="https://www.pokemon.com/nl/">Officiele Pokemon Site</a></li>
+
+        <li><img src="img/pikachu_wait.gif" style=" max-width: 10.2rem;" alt=""></li>
+      </ul>
+    </nav>
+    <a href="#main-menu-toggle" class="backdrop" hidden></a>
+  </header>
+  <div id="header-container" class="ui inverted segment">
+        <div class="ui inverted secondary menu">
+           <h1 id="header-text">Hoenn Pokemon</h1><br>
+        </div>
+        <p>Dit zijn alle pokemon die je kan krijgen in Hoenn.</p>
+  </div>
+  <div id="container">
+    <div id="poke-container" class="ui cards">
+      <!-- will hold the cards for all the pokemon -->
+      <button id="generate-pokemon" class="ui secondary button">Generate Pokemon</button>
+    </div>
+  </div>
+  <div id="delete-container">
+    <button id="delete-btn" class="ui red button">Delete</button>
+  </div>
+</body>
+<script defer src="js/all_pokemon.js" charset="utf-8"></script>
+
+</html>
